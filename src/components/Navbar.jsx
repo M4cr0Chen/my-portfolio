@@ -28,15 +28,25 @@ const Navbar = ({ navOpen }) => {
     window.addEventListener('resize', initActiveBox);
 
     const activeCurrentLink = (event) => {
-        lastActiveLink.current?.classList.remove('active');
-        event.target.classList.add('active');
-        lastActiveLink.current = event.target;
+      event.preventDefault();
+      const targetSection = document.querySelector(event.target.getAttribute('href'));
 
-        activeBox.current.style.top = event.target.offsetTop + 'px';
-        activeBox.current.style.left = event.target.offsetLeft + 'px';
-        activeBox.current.style.width = event.target.offsetWidth + 'px';
-        activeBox.current.style.height = event.target.offsetHeight + 'px';
-    }
+      // Smoothly scroll to the section
+      targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+      });
+
+      // Handle active link box positioning
+      lastActiveLink.current?.classList.remove('active');
+      event.target.classList.add('active');
+      lastActiveLink.current = event.target;
+
+      activeBox.current.style.top = event.target.offsetTop + 'px';
+      activeBox.current.style.left = event.target.offsetLeft + 'px';
+      activeBox.current.style.width = event.target.offsetWidth + 'px';
+      activeBox.current.style.height = event.target.offsetHeight + 'px';
+  }
 
     const navItems = [
         {
