@@ -10,16 +10,6 @@ import SkillCard from './SkillCard';
 
 const skillItem = [
     {
-      imgSrc: '/images/figma.svg',
-      label: 'Figma',
-      desc: 'Design tool'
-    },
-    {
-      imgSrc: '/images/css3.svg',
-      label: 'CSS',
-      desc: 'User Interface'
-    },
-    {
       imgSrc: '/images/javascript.svg',
       label: 'JavaScript',
       desc: 'Interaction'
@@ -28,6 +18,21 @@ const skillItem = [
       imgSrc: '/images/nodejs.svg',
       label: 'NodeJS',
       desc: 'Web Server'
+    },
+    {
+      imgSrc: '/images/react.svg',
+      label: 'React',
+      desc: 'Framework'
+    },
+    {
+      imgSrc: '/images/django.svg',
+      label: 'Django',
+      desc: 'Python Framework'
+    },
+    {
+      imgSrc: '/images/docker.svg',
+      label: 'Docker',
+      desc: 'Python Framework'
     },
     {
       imgSrc: '/images/expressjs.svg',
@@ -40,14 +45,19 @@ const skillItem = [
       desc: 'Database'
     },
     {
-      imgSrc: '/images/react.svg',
-      label: 'React',
-      desc: 'Framework'
-    },
-    {
       imgSrc: '/images/tailwindcss.svg',
       label: 'TailwindCSS',
       desc: 'User Interface'
+    },
+    {
+      imgSrc: '/images/css3.svg',
+      label: 'CSS',
+      desc: 'User Interface'
+    },
+    {
+      imgSrc: '/images/figma.svg',
+      label: 'Figma',
+      desc: 'Design tool'
     },
   ];
 

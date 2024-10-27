@@ -49,7 +49,7 @@ const Contact = () => {
                 </h2>
 
                 <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
-                    Reach out today to discuss your project needs and start collaborating on something amazing!
+                    Reach out today to contact with me and start collaborating on something amazing!
                 </p>
 
                 <div className="flex items-center gap-2 mt-auto">
@@ -124,7 +124,7 @@ const Contact = () => {
                     <textarea 
                         name="" 
                         id=""
-                        placeholder="Hi!"
+                        placeholder="Hi! I would like to connect with you."
                         required
                         className="text-field resize-y min-h-32 max-h-80 reveal-up"
                     >

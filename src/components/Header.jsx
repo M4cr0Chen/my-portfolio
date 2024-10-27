@@ -15,6 +15,11 @@ import Navbar from "./Navbar"
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
+    const handleScrollToAbout = (e) => {
+        e.preventDefault();
+        const aboutSection = document.querySelector('#contact');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      };
 
   return (
     <header className="fixed top-0 left-0 w-full h-20 flex 
@@ -47,6 +52,7 @@ const Header = () => {
 
             <a 
                 href="#contact"
+                onClick={handleScrollToAbout}
                 className="btn btn-secondary max-md:hidden
                 md:justify-self-end">
                 Contact Me

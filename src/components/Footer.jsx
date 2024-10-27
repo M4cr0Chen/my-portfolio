@@ -34,28 +34,39 @@ const sitemap = [
   const socials = [
     {
       label: 'GitHub',
-      href: 'https://www.github.com/codewithsadee-org'
+      href: 'https://github.com/M4cr0Chen'
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/codewithsadee'
+      href: 'https://www.linkedin.com/in/zhenghong-chen-974102245/'
     },
     {
-      label: 'Twitter X',
-      href: 'https://x.com/codewithsadee_'
+      label: 'Blog',
+      href: 'https://www.macrochen.top/'
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/codewithsadee'
+      href: 'https://www.instagram.com/macro_ch4n/'
     },
     {
-      label: 'CodePen',
-      href: 'https://codepen.io/codewithsadee'
+      label: 'Youtube',
+      href: 'https://www.youtube.com/@macrochen9280'
     }
   ];
 
 
 const Footer = () => {
+  const handleScrollToAbout = (event) => {
+    event.preventDefault();
+    const targetSection = document.querySelector(event.target.getAttribute('href'));
+
+    // Smoothly scroll to the section
+    targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+  }
+
   return (
     <footer className="section">
         <div className="container">
@@ -85,6 +96,7 @@ const Footer = () => {
                                 <li key={key}>
                                     <a 
                                         href={href}
+                                        onClick={handleScrollToAbout}
                                         className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                                     >
                                         {label}

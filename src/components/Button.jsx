@@ -40,7 +40,9 @@ const ButtonPrimary = ({
         )
     } else {
         return (
-            <button className={"btn btn-primary " + classes}>
+            <button 
+                className={"btn btn-primary " + classes}
+                >
                 {label}
 
                 {icon ?
@@ -73,7 +75,8 @@ const ButtonOutline = ({
     target = '_self',
     label,
     icon,
-    classes
+    classes,
+    onClick
 }) => {
     if (href) {
         return (
@@ -81,6 +84,7 @@ const ButtonOutline = ({
                 href={href}
                 target={target}
                 className={"btn btn-outline " + classes}
+                onClick={onClick}
             >
                 {label}
 
@@ -96,7 +100,7 @@ const ButtonOutline = ({
         )
     } else {
         return (
-            <button className={"btn btn-outline " + classes}>
+            <button className={"btn btn-outline " + classes} onClick={onClick}>
                 {label}
 
                 {icon ?
@@ -117,7 +121,8 @@ ButtonOutline.propTypes = {
     href: PropTypes.string,
     target: PropTypes.string,
     icon: PropTypes.string,
-    classes: PropTypes.string
+    classes: PropTypes.string,
+    onClick: PropTypes.func
 }
 
 export {
