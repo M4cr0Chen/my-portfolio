@@ -80,7 +80,7 @@ const Footer = () => {
 
                     <ButtonPrimary 
                         href="mailto:z253chen@uwaterloo.ca"
-                        label="Start Project"
+                        label="Email Me"
                         icon="chevron_right"
                         classes="reveal-up"
                     />

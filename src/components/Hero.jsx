@@ -57,6 +57,7 @@ const Hero = () => {
                     <ButtonPrimary 
                         label="Download CV"
                         icon={"download"}
+                        href="Zhenghong Chen-Resume.pdf"
                     />
 
                     <ButtonOutline 

@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 
 const ButtonPrimary = ({
     href,
-    target = '_self',
+    target = '_blank',
     label,
     icon,
     classes
@@ -24,7 +24,8 @@ const ButtonPrimary = ({
             <a 
                 href={href}
                 target={target}
-                className={"btn btn-primary" + classes}
+                rel="noopener noreferrer"
+                className={"btn btn-primary " + classes}
             >
                 {label}
 
