@@ -10,39 +10,45 @@ import ProjectCard from './ProjectCard';
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
-      title: 'Full stack music app',
-      tags: ['API', 'MVC', 'Development'],
-      projectLink: 'https://musify-5al0.onrender.com/'
+      imgSrc: '/images/project-1.png',
+      title: 'Auto Finder',
+      tags: ['Django', 'MVC', 'MongoDB'],
+      projectLink: 'https://github.com/M4cr0Chen/xrwvm-fullstack_developer_capstone'
     },
     {
-      imgSrc: '/images/project-2.jpg',
-      title: 'Free stock photo app',
-      tags: ['API', 'SPA'],
-      projectLink: 'https://pixstock-official.vercel.app/'
+      imgSrc: '/images/project-2.png',
+      title: 'Portfolio Website',
+      tags: ['React', 'Tailwind CSS'],
+      projectLink: 'https://github.com/M4cr0Chen/my-portfolio'
     },
     {
-      imgSrc: '/images/project-3.jpg',
-      title: 'Recipe app',
-      tags: ['Development', 'API'],
-      projectLink: ''
+      imgSrc: '/images/project-3.png',
+      title: 'AI Laundry Robot',
+      tags: ['Python', 'AI', 'Embedded System'],
+      projectLink: 'https://github.com/M4cr0Chen/Automatic-Landry-Machine'
     },
     {
-      imgSrc: '/images/project-4.jpg',
-      title: 'Real state website',
-      tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/codewithsadee-org/wealthome'
+      imgSrc: '/images/project-4.png',
+      title: 'Blog Website',
+      tags: ['Hexo', 'Butterfly', 'Git', 'Vercel'],
+      projectLink: 'https://www.macrochen.top/'
     },
     {
-      imgSrc: '/images/project-5.jpg',
-      title: 'eCommerce website',
-      tags: ['eCommerce', 'Development'],
-      projectLink: 'https://github.com/codewithsadee/anon-ecommerce-website'
+      imgSrc: '/images/project-5.png',
+      title: 'Plants vs Zombies',
+      tags: ['Game Development', 'C', 'EasyX'],
+      projectLink: 'https://github.com/M4cr0Chen/My-Plants-VS-Zombies'
+    },
+    {
+      imgSrc: '/images/project-6.png',
+      title: 'Kneadaschit',
+      tags: ['Toilet Map', 'API', 'Development'],
+      projectLink: 'https://kneadaschit.biz/'
     },
     {
       imgSrc: '/images/project-6.jpg',
-      title: 'vCard Personal portfolio',
-      tags: ['Web-design', 'Development'],
+      title: 'Counter-Strike (Ongoing)',
+      tags: ['UE5', 'Blueprint', 'Development'],
       projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
     },
   ];

@@ -42,7 +42,7 @@ const About = () => {
                     }
 
                     <img
-                    src="/images/logo.svg" 
+                    src="/images/Z.svg" 
                     alt="Logo" 
                     width={30}
                     height={30}

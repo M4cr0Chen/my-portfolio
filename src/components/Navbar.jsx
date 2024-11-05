@@ -42,10 +42,11 @@ const Navbar = ({ navOpen }) => {
       event.target.classList.add('active');
       lastActiveLink.current = event.target;
 
-      activeBox.current.style.top = event.target.offsetTop + 'px';
-      activeBox.current.style.left = event.target.offsetLeft + 'px';
-      activeBox.current.style.width = event.target.offsetWidth + 'px';
-      activeBox.current.style.height = event.target.offsetHeight + 'px';
+      // Previously highlighted link adjust by click, now adjust by scrolling
+      // activeBox.current.style.top = event.target.offsetTop + 'px';
+      // activeBox.current.style.left = event.target.offsetLeft + 'px';
+      // activeBox.current.style.width = event.target.offsetWidth + 'px';
+      // activeBox.current.style.height = event.target.offsetHeight + 'px';
   }
 
     const navItems = [
@@ -65,17 +66,67 @@ const Navbar = ({ navOpen }) => {
           link: '#work',
           className: 'nav-link'
         },
-        {
-          label: 'Reviews',
-          link: '#reviews',
-          className: 'nav-link'
-        },
+        // {
+        //   label: 'Reviews',
+        //   link: '#reviews',
+        //   className: 'nav-link'
+        // },
         {
           label: 'Contact',
           link: '#contact',
           className: 'nav-link md:hidden'
         }
       ];
+
+      useEffect(() => {
+        const handleScroll = () => {
+          const sections = navItems.map(item => 
+            document.querySelector(item.link)
+          );
+          
+          const scrollPosition = window.scrollY + 100;
+          const pageBottom = window.innerHeight + window.scrollY;
+          const footer = document.querySelector('footer');
+      
+          // If we're at the footer, keep Work section highlighted, -53px to account for the footer height
+          if (footer && pageBottom >= document.documentElement.scrollHeight - 53) {
+            const workLink = document.querySelector('a[href="#work"]');
+            lastActiveLink.current?.classList.remove('active');
+            workLink.classList.add('active');
+            lastActiveLink.current = workLink;
+      
+            activeBox.current.style.top = workLink.offsetTop + 'px';
+            activeBox.current.style.left = workLink.offsetLeft + 'px';
+            activeBox.current.style.width = workLink.offsetWidth + 'px';
+            activeBox.current.style.height = workLink.offsetHeight + 'px';
+            return;
+          }
+      
+          sections.forEach((section, index) => {
+            if (!section) return;
+            
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              lastActiveLink.current?.classList.remove('active');
+              const newActiveLink = document.querySelector(`a[href="${navItems[index].link}"]`);
+              newActiveLink.classList.add('active');
+              lastActiveLink.current = newActiveLink;
+      
+              activeBox.current.style.top = newActiveLink.offsetTop + 'px';
+              activeBox.current.style.left = newActiveLink.offsetLeft + 'px';
+              activeBox.current.style.width = newActiveLink.offsetWidth + 'px';
+              activeBox.current.style.height = newActiveLink.offsetHeight + 'px';
+            }
+          });
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, [navItems]);
+      
+
 
   return (
     <nav className={'navbar ' + (navOpen ? 'active': '')}>
