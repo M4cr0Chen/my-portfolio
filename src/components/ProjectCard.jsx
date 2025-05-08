@@ -11,13 +11,14 @@ import PropTypes from "prop-types";
 const ProjectCard = ({
     imgSrc,
     title,
-    tags,
+    description,
+    techStack,
     projectLink,
     classes
 }) => {
   return (
-    <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
-        <figure className="img-box aspect-square rounded-lg mb-4">
+    <div className={"relative p-6 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors flex flex-col md:flex-row h-auto min-h-full " + classes}>
+        <figure className="img-box aspect-square w-full max-h-96 md:max-w-md rounded-lg mb-6 md:mb-0 md:mr-4 shrink-0">
             <img 
             src={imgSrc}
             alt={title}
@@ -26,49 +27,60 @@ const ProjectCard = ({
             />
         </figure>
 
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col flex-grow min-w-0 pb-16">
+            <h3 className="text-2xl mb-4">
+                {title}
+            </h3>
 
-            <div>
-                <h3 className="title-1 mb-3">
-                    {title}
-                </h3>
-
-                <div className="flex flex-wrap items-center gap-2">
-                    {tags.map((label, key) => (
+            {techStack && (
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                    {techStack.map((tech, key) => (
                         <span
                         key={key}
-                        className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"
+                        className="h-8 text-sm text-sky-300 bg-sky-400/20 grid items-center px-3 rounded-lg"
                         >
-                            {label}
+                            {tech}
                         </span>
                     ))}
                 </div>
-            </div>
+            )}
 
-            <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0">
-                <span 
-                className="material-symbols-rounded"
-                aria-hidden="true"
+            {description && (
+                <div className="text-[#eaeaea] text-lg mb-4">
+                    <ul className="list-disc pl-5 space-y-1">
+                        {description.map((point, key) => (
+                            <li key={key} className="break-words">{point}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            {/* <div className="flex flex-wrap items-center gap-2 mb-4">
+                {tags.map((label, key) => (
+                    <span
+                    key={key}
+                    className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"
+                    >
+                        {label}
+                    </span>
+                ))}
+            </div> */}
+
+            <div className="absolute bottom-6 right-6">
+                <button 
+                  onClick={() => window.open(projectLink, '_blank')}
+                  className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0"
+                  aria-label={`View ${title} project`}
                 >
-                    arrow_outward
-                </span>
+                    <span 
+                      className="material-symbols-rounded"
+                      aria-hidden="true"
+                    >
+                        arrow_outward
+                    </span>
+                </button>
             </div>
-
-            <a 
-            href={projectLink}
-            target='_blank'
-            className="absolute inset-0"
-            ></a>
-
         </div>
-
-        <a 
-        href={projectLink}
-        target='_blank'
-        className=""
-        >
-
-        </a>
     </div>
   )
 }
@@ -77,6 +89,8 @@ ProjectCard.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
+    description: PropTypes.string,
+    techStack: PropTypes.array,
     projectLink: PropTypes.string,
     classes: PropTypes.string,
 }
