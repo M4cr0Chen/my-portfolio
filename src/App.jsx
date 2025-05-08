@@ -24,6 +24,7 @@ import Header from  './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skill from './components/Skill';
+import Experience from './components/Experience';
 import Work from './components/Work';
 import Review from './components/Review';
 import Contact from './components/Contact';
@@ -57,6 +58,7 @@ const App = () => {
                 <Hero />
                 <About />
                 <Skill />
+                <Experience />
                 <Work />
                 {/*<Review />*/}
                 <Contact />            
