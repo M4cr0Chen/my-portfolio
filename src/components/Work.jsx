@@ -20,7 +20,7 @@ const works = [
       'Ensured thread safety with fine-grained mutex locks and atomic operations; stress-tested at 350K+ ops per run with no race conditions'
     ],
     techStack: ['C++', 'Algorithm', 'Data Structure', 'Concurrent Programming'],
-    projectLink: 'https://github.com/M4cr0Chen/xrwvm-fullstack_developer_capstone'
+    projectLink: 'https://github.com/M4cr0Chen/CacheSystem'
   },
   {
     imgSrc: '/images/digit-recognition.png',
@@ -31,14 +31,14 @@ const works = [
       'Applied preprocessing pipeline with OpenCV including grayscale normalization, resizing, and channel handling',
       'Visualized predictions on custom images that loaded, processed, and classified external handwritten digits'
     ],
-    techStack: ['C++', 'Algorithm', 'Data Structure', 'Concurrent Programming'],
-    projectLink: 'https://github.com/M4cr0Chen/xrwvm-fullstack_developer_capstone'
+    techStack: ['Python', 'TensorFlow', 'OpenCV', 'Keras', 'CNN', 'MNIST'],
+    projectLink: 'https://github.com/M4cr0Chen/myDigitRecognition'
   },
   {
     imgSrc: '/images/project-1.png',
     title: 'Auto Finder',
     description: ['A fullstack web application that helps users find and compare cars based on their preferences. Features include search filters, comparison tools, and user reviews.', 'Built reusable UI components with React, applying state management for responsive design', 'Developed a Django backend with optimized ORM queries and integrated MongoDB for flexible data storage', 'Containerized the application using Docker and orchestrated deployments with Kubernetes, lowering infrastructure costs by 30% and achieving seamless environment scaling'],
-    techStack: ['Python', 'Django', 'MongoDB', 'MVC'],
+    techStack: ['React', 'Python', 'Django', 'MongoDB', 'MVC', 'Docker', 'Kubernetes'],
     projectLink: 'https://github.com/M4cr0Chen/xrwvm-fullstack_developer_capstone'
   },
   {
