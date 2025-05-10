@@ -58,21 +58,29 @@ const works = [
   {
     imgSrc: '/images/project-3.png',
     title: 'AI Laundry Robot',
-    description: ['An automated laundry robot that uses AI to sort, wash, and fold clothes. Includes computer vision for fabric detection and stain analysis.'],
-    techStack: ['Python', 'TensorFlow', 'OpenCV', 'LEGO'],
+    description: [
+      'Won first place in an AI hackathon by working with six colleagues to develop an AI robot that is energy efficient',
+      'Implemented a voice-controlled system powered by PyAudio, allowing users to issue verbal commands',
+      'Utilized UART protocol to establish reliable data transfer between Python and Arduino, facilitating real-time command execution and hardware control'
+    ],
+    techStack: ['Python', 'Arduino','LEGO'],
     projectLink: 'https://github.com/M4cr0Chen/Automatic-Landry-Machine'
   },
   {
     imgSrc: '/images/project-4.png',
     title: 'Blog Website',
-    description: ['A personal blog website where I share my thoughts on technology, programming, and personal experiences. Features comment system and search functionality.'],
+    description: ['A personal blog website where I share my course notes, programming projects, and thoughts on technology, programming, as well as personal experiences. Features comment system and search functionality.'],
     techStack: ['Hexo', 'JavaScript', 'CSS', 'Vercel'],
     projectLink: 'https://www.macrochen.top/'
   },
   {
     imgSrc: '/images/project-5.png',
     title: 'Plants vs Zombies',
-    description: ['A recreation of the popular Plants vs Zombies game with custom features and levels. Includes various plant types and zombie challenges.'],
+    description: [
+      'A recreation of the popular Plants vs Zombies game in C language. ',
+      'Utilized B´ezier Curve to implement vector calculation of object movement',
+      'Optimized game performance by 40% leveraging the double buffering technique'
+    ],
     techStack: ['C', 'EasyX', 'Game Development', 'Algorithms'],
     projectLink: 'https://github.com/M4cr0Chen/My-Plants-VS-Zombies'
   },
@@ -84,10 +92,10 @@ const works = [
     projectLink: 'https://kneadaschit.biz/'
   },
   {
-    imgSrc: '/images/project-6.jpg',
+    imgSrc: '/images/counter_strike.png',
     title: 'Counter-Strike (Ongoing)',
     description: ['A first-person shooter game inspired by Counter-Strike, built using Unreal Engine 5. Currently in development with custom maps and game modes.'],
-    techStack: ['Unreal Engine 5', 'Blueprint', 'C++', '3D Modeling'],
+    techStack: ['Unreal Engine 5', 'Blueprint', 'IK Retargeting', 'Animation'],
     projectLink: 'https://github.com/codewithsadee/vcard-personal-portfolio'
   },
 ];
@@ -96,7 +104,7 @@ const works = [
 const Work = () => {
   return (
     <section
-      id="work"
+      id="projects"
       className="section"
     >
       <div className="container">

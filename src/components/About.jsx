@@ -24,7 +24,7 @@ const About = () => {
         <div className="container">
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                    Welcome! I&apos;m Zhenghong Chen, a second year CS student at the University of Waterloo. I&apos;m passionate about full-stack development, game development, AR/VR, AI/ML, Algorithms, and so much more. I have experience in Full Stack Web Development and Quality Assurance Engineering.
+                    Welcome! I&apos;m Zhenghong Chen, a second year CS student at the University of Waterloo. I&apos;m passionate about distributed systems, compilers, machine learning, web development, game development, and so much more. I have experience in Web Development and Quality Assurance.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7">
