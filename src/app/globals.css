@@ -38,3 +38,13 @@ a {
 .cursor-blink {
   animation: blink 1s step-end infinite;
 }
+
+/* Hide scrollbar */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

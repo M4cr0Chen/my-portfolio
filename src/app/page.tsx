@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center p-4 md:p-8">
       {/* macOS Terminal Window */}
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-6xl">
         <div className="bg-[#1e1e1e] rounded-xl shadow-2xl overflow-hidden border border-[#404040]">
           {/* Terminal Title Bar */}
           {/* #323232 */}
@@ -17,7 +17,22 @@ export default function Home() {
           </div>
 
           {/* Terminal Content */}
-          <div className="m-6 font-mono text-sm leading-7">
+          <div className="p-6 pt-2 font-mono text-lg leading-7">
+            {/* ASCII Art */}
+            <pre className="text-[#6f7c75] text-xl leading-none mb-4 overflow-x-auto whitespace-pre scrollbar-none">
+{`        ___   ____
+      /\` --;^/ ,-_\\     \\|/
+     / / --o\\ o-\\ \\\\  --(_)--
+    /-/-/|o|-|\\-\\\\|\\\\   /|\\      __  ___                         ________
+     '\`  \` |-|   \`\` '           /  |/  /___ _______________     / ____/ /_  ___  ____
+           |-|                 / /|_/ / __ \`/ ___/ ___/ __ \\   / /   / __ \\/ _ \\/ __ \\
+           |-|O               / /  / / /_/ / /  / /__/ /_/ /  / /___/ / / /  __/ / / /
+           |-(\\,__           /_/  /_/\\__,_/_/   \\___/\\____/   \\____/_/ /_/\\___/_/ /_/
+        ...|-)\\--,\\_....
+    ,;;;;;;;;;;;;;;;;;;;;;;;;,.
+~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`}
+            </pre>
+
             {/* Command prompt */}
             <p className="text-[#ccc] mb-1">
               <span className="text-[#6a9fb5]">~/Portfolio/zhenghongchen.ca</span>
