@@ -236,11 +236,6 @@ export default function Home() {
           2025 © Zhenghong Chen
         </p>
       </div>
-
-      {/* Decorative star */}
-      <div className="fixed bottom-8 right-8 text-5xl text-[#333]">
-        ★
-      </div>
     </div>
   );
 }
