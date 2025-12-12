@@ -3,6 +3,8 @@
  * @license Apache-2.0
  */
 
+"use client";
+
 import dynamic from "next/dynamic";
 
 const HomeContent = dynamic(() => import("./HomeContent"), {
