@@ -1,35 +1,34 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+/**
+ * @copyright 2024 Zhenghong Chen
+ * @license Apache-2.0
+ */
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../index.css";
+import "lenis/dist/lenis.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Zhenghong Chen",
-  description: "Software Engineer - CS Student at University of Waterloo",
-  keywords: ["software engineer", "developer", "waterloo", "portfolio"],
-  authors: [{ name: "Zhenghong Chen" }],
-  openGraph: {
-    title: "Zhenghong Chen",
-    description: "Software Engineer - CS Student at University of Waterloo",
-    type: "website",
-  },
+  title: "Zhenghong Chen - Portfolio",
+  description: "Personal portfolio of Zhenghong Chen",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
-        {children}
-      </body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+      </head>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
