@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 
-const TERMINAL_PORTFOLIO_URL = "https://terminal.zhenghong.dev";
+const TERMINAL_PORTFOLIO_URL = "https://marcochen.ca";
 
 const TerminalPrompt = () => {
   const [showPrompt, setShowPrompt] = useState(false);
