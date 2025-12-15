@@ -142,7 +142,7 @@ const Work = () => {
       sectionId="projects"
       title="Projects"
       items={works}
-      renderItem={(work, index, isExpandedItem) => (
+      renderItem={(work, index) => (
         <ProjectCard
           key={index}
           imgSrc={work.imgSrc}
@@ -150,7 +150,6 @@ const Work = () => {
           description={work.description}
           techStack={work.techStack}
           projectLink={work.projectLink}
-          classes={isExpandedItem ? "" : "reveal-up"}
         />
       )}
       gridClassName="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8"

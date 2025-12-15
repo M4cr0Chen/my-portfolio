@@ -17,7 +17,6 @@ interface CourseCardProps {
   name: string;
   description: string;
   category: string;
-  className?: string;
 }
 
 const courses: Course[] = [
@@ -65,9 +64,9 @@ const courses: Course[] = [
   },
 ];
 
-const CourseCard = ({ code, name, description, category, className = "" }: CourseCardProps) => {
+const CourseCard = ({ code, name, description, category }: CourseCardProps) => {
   return (
-    <div className={`bg-zinc-800/50 p-6 rounded-2xl hover:bg-zinc-700/50 transition-colors ${className}`}>
+    <div className="bg-zinc-800/50 p-6 rounded-2xl hover:bg-zinc-700/50 transition-colors">
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="text-xl font-semibold text-white">{code}</h3>
@@ -89,14 +88,13 @@ const Courses = () => {
       title="Courses"
       description="A selection of key courses during my academic journey."
       items={courses}
-      renderItem={(course, index, isExpandedItem) => (
+      renderItem={(course, index) => (
         <CourseCard
           key={index}
           code={course.code}
           name={course.name}
           description={course.description}
           category={course.category}
-          className={isExpandedItem ? "" : "reveal-up"}
         />
       )}
       gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"

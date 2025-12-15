@@ -102,13 +102,12 @@ const Skill = () => {
       title="Skills"
       description="Discover the powerful tools and technologies I use."
       items={skillItem}
-      renderItem={(skill, index, isExpandedItem) => (
+      renderItem={(skill, index) => (
         <SkillCard
           key={index}
           imgSrc={skill.imgSrc}
           label={skill.label}
           desc={skill.desc}
-          classes={isExpandedItem ? "" : "reveal-up"}
         />
       )}
       gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"

@@ -19,7 +19,7 @@ const ExperienceCard = ({
   description,
 }: ExperienceCardProps) => {
   return (
-    <div className="bg-zinc-800/50 p-6 rounded-2xl mb-6 reveal-up">
+    <div className="bg-zinc-800/50 p-6 rounded-2xl mb-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
