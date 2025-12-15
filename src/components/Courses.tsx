@@ -3,6 +3,8 @@
  * @license Apache-2.0
  */
 
+import CollapsibleSection from "./CollapsibleSection";
+
 interface Course {
   code: string;
   name: string;
@@ -15,6 +17,7 @@ interface CourseCardProps {
   name: string;
   description: string;
   category: string;
+  className?: string;
 }
 
 const courses: Course[] = [
@@ -62,9 +65,9 @@ const courses: Course[] = [
   },
 ];
 
-const CourseCard = ({ code, name, description, category }: CourseCardProps) => {
+const CourseCard = ({ code, name, description, category, className = "" }: CourseCardProps) => {
   return (
-    <div className="bg-zinc-800/50 p-6 rounded-2xl hover:bg-zinc-700/50 transition-colors reveal-up">
+    <div className={`bg-zinc-800/50 p-6 rounded-2xl hover:bg-zinc-700/50 transition-colors ${className}`}>
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="text-xl font-semibold text-white">{code}</h3>
@@ -81,27 +84,27 @@ const CourseCard = ({ code, name, description, category }: CourseCardProps) => {
 
 const Courses = () => {
   return (
-    <section id="courses" className="section">
-      <div className="container">
-        <h2 className="headline-2 reveal-up">Courses</h2>
-
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-          A selection of key courses during my academic journey.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {courses.map((course, index) => (
-            <CourseCard
-              key={index}
-              code={course.code}
-              name={course.name}
-              description={course.description}
-              category={course.category}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    <CollapsibleSection
+      sectionId="courses"
+      title="Courses"
+      description="A selection of key courses during my academic journey."
+      items={courses}
+      renderItem={(course, index, isExpandedItem) => (
+        <CourseCard
+          key={index}
+          code={course.code}
+          name={course.name}
+          description={course.description}
+          category={course.category}
+          className={isExpandedItem ? "" : "reveal-up"}
+        />
+      )}
+      gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+      itemName="courses"
+      previewCount={2}
+      enableOnDesktop={false}
+      enableOnMobile={true}
+    />
   );
 };
 

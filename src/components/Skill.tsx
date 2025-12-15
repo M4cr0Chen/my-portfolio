@@ -4,6 +4,7 @@
  */
 
 import SkillCard from "./SkillCard";
+import CollapsibleSection from "./CollapsibleSection";
 
 interface SkillItem {
   imgSrc: string;
@@ -96,27 +97,26 @@ const skillItem: SkillItem[] = [
 
 const Skill = () => {
   return (
-    <section id="skills" className="section">
-      <div className="container">
-        <h2 className="headline-2 reveal-up">Skills</h2>
-
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-          Discover the powerful tools and technologies I use.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {skillItem.map(({ imgSrc, label, desc }, key) => (
-            <SkillCard
-              key={key}
-              imgSrc={imgSrc}
-              label={label}
-              desc={desc}
-              classes="reveal-up"
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    <CollapsibleSection
+      sectionId="skills"
+      title="Skills"
+      description="Discover the powerful tools and technologies I use."
+      items={skillItem}
+      renderItem={(skill, index, isExpandedItem) => (
+        <SkillCard
+          key={index}
+          imgSrc={skill.imgSrc}
+          label={skill.label}
+          desc={skill.desc}
+          classes={isExpandedItem ? "" : "reveal-up"}
+        />
+      )}
+      gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+      itemName="skills"
+      previewCount={2}
+      enableOnDesktop={false}
+      enableOnMobile={true}
+    />
   );
 };
 

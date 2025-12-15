@@ -4,6 +4,7 @@
  */
 
 import ProjectCard from "./ProjectCard";
+import CollapsibleSection from "./CollapsibleSection";
 
 interface WorkItem {
   imgSrc: string;
@@ -137,27 +138,27 @@ const works: WorkItem[] = [
 
 const Work = () => {
   return (
-    <section id="projects" className="section">
-      <div className="container">
-        <h2 className="headline-2 mb-8 reveal-up">Projects</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
-          {works.map(
-            ({ imgSrc, title, description, techStack, projectLink }, key) => (
-              <ProjectCard
-                key={key}
-                imgSrc={imgSrc}
-                title={title}
-                description={description}
-                techStack={techStack}
-                projectLink={projectLink}
-                classes="reveal-up"
-              />
-            )
-          )}
-        </div>
-      </div>
-    </section>
+    <CollapsibleSection
+      sectionId="projects"
+      title="Projects"
+      items={works}
+      renderItem={(work, index, isExpandedItem) => (
+        <ProjectCard
+          key={index}
+          imgSrc={work.imgSrc}
+          title={work.title}
+          description={work.description}
+          techStack={work.techStack}
+          projectLink={work.projectLink}
+          classes={isExpandedItem ? "" : "reveal-up"}
+        />
+      )}
+      gridClassName="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8"
+      itemName="projects"
+      previewCount={2}
+      enableOnDesktop={true}
+      enableOnMobile={true}
+    />
   );
 };
 
