@@ -20,6 +20,23 @@ const Navbar = ({ navOpen }: NavbarProps) => {
   const lastActiveLink = useRef<HTMLAnchorElement | null>(null);
   const activeBox = useRef<HTMLDivElement | null>(null);
 
+  // Check if an element is visible (not hidden by CSS like md:hidden)
+  const isElementVisible = (element: HTMLElement | null): boolean => {
+    if (!element) return false;
+    const style = window.getComputedStyle(element);
+    return style.display !== "none" && style.visibility !== "hidden";
+  };
+
+  // Update activeBox position only if target is visible
+  const updateActiveBoxPosition = (link: HTMLAnchorElement | null) => {
+    if (!activeBox.current || !link || !isElementVisible(link)) return;
+
+    activeBox.current.style.top = link.offsetTop + "px";
+    activeBox.current.style.left = link.offsetLeft + "px";
+    activeBox.current.style.width = link.offsetWidth + "px";
+    activeBox.current.style.height = link.offsetHeight + "px";
+  };
+
   const initActiveBox = () => {
     if (activeBox.current && lastActiveLink.current) {
       activeBox.current.style.top = lastActiveLink.current.offsetTop + "px";
@@ -103,20 +120,22 @@ const Navbar = ({ navOpen }: NavbarProps) => {
         footer &&
         pageBottom >= document.documentElement.scrollHeight - 53
       ) {
-        const workLink = document.querySelector(
-          'a[href="#work"]'
+        // Try Contact first (visible on mobile), fallback to Projects (visible on desktop)
+        const contactLink = document.querySelector(
+          'a[href="#contact"]'
         ) as HTMLAnchorElement;
-        if (workLink) {
-          lastActiveLink.current?.classList.remove("active");
-          workLink.classList.add("active");
-          lastActiveLink.current = workLink;
+        const projectsLink = document.querySelector(
+          'a[href="#projects"]'
+        ) as HTMLAnchorElement;
 
-          if (activeBox.current) {
-            activeBox.current.style.top = workLink.offsetTop + "px";
-            activeBox.current.style.left = workLink.offsetLeft + "px";
-            activeBox.current.style.width = workLink.offsetWidth + "px";
-            activeBox.current.style.height = workLink.offsetHeight + "px";
-          }
+        // Use Contact if visible (mobile), otherwise Projects (desktop)
+        const targetLink = isElementVisible(contactLink) ? contactLink : projectsLink;
+
+        if (targetLink && isElementVisible(targetLink)) {
+          lastActiveLink.current?.classList.remove("active");
+          targetLink.classList.add("active");
+          lastActiveLink.current = targetLink;
+          updateActiveBoxPosition(targetLink);
         }
         return;
       }
@@ -128,20 +147,16 @@ const Navbar = ({ navOpen }: NavbarProps) => {
         const sectionBottom = sectionTop + (section as HTMLElement).offsetHeight;
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          lastActiveLink.current?.classList.remove("active");
           const newActiveLink = document.querySelector(
             `a[href="${navItems[index].link}"]`
           ) as HTMLAnchorElement;
-          if (newActiveLink) {
+
+          // Only update if the link is visible (handles md:hidden case)
+          if (newActiveLink && isElementVisible(newActiveLink)) {
+            lastActiveLink.current?.classList.remove("active");
             newActiveLink.classList.add("active");
             lastActiveLink.current = newActiveLink;
-
-            if (activeBox.current) {
-              activeBox.current.style.top = newActiveLink.offsetTop + "px";
-              activeBox.current.style.left = newActiveLink.offsetLeft + "px";
-              activeBox.current.style.width = newActiveLink.offsetWidth + "px";
-              activeBox.current.style.height = newActiveLink.offsetHeight + "px";
-            }
+            updateActiveBoxPosition(newActiveLink);
           }
         }
       });
