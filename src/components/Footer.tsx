@@ -54,7 +54,7 @@ const socials: SocialItem[] = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/macro_ch4n/",
+    href: "https://www.instagram.com/zhenghong_chen_/",
   },
   {
     label: "Youtube",
@@ -62,7 +62,7 @@ const socials: SocialItem[] = [
   },
 ];
 
-const TERMINAL_PORTFOLIO_URL = "https://terminal.zhenghong.dev";
+const TERMINAL_PORTFOLIO_URL = "https://marcochen.ca";
 
 const Footer = () => {
   const handleScrollToAbout = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -137,7 +137,7 @@ const Footer = () => {
           </a>
 
           <p className="text-zinc-500 text-sm">
-            &copy; 2024 <span className="text-zinc-200">Zhenghong Chen</span>
+            &copy; 2025 <span className="text-zinc-200">Zhenghong Chen</span>
           </p>
 
           <a
