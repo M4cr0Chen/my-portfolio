@@ -16,6 +16,42 @@ interface WorkItem {
 
 const works: WorkItem[] = [
   {
+    imgSrc: "/images/project-7.png",
+    title: "SnapNote AI",
+    description: [
+      "Built FastAPI/Next.js platform using OCR with Google Cloud Vision API to digitize any lecture notes",
+      "Architected multi-agent workflow to automate document structuring and complex LaTeX formula extraction",
+      "Engineered a RAG pipeline utilizing pgvector and multilingual MiniLM embeddings to facilitate high-performance semantic search across hundreds of digitized documents stored in a PostgreSQL database",
+    ],
+    techStack: [
+      "FastAPI",
+      "Next.js",
+      "PostgreSQL",
+      "pgvector",
+      "LangGraph",
+      "Google Cloud Vision",
+      "RAG",
+    ],
+    projectLink: "",
+  },
+  {
+    imgSrc: "/images/project-8.png",
+    title: "Supervised Chess Neural Network",
+    description: [
+      "Architected an AlphaZero-style ResNet in PyTorch to automate move selection and position evaluation",
+      "Implemented legal move masking and multi-worker data loading to optimize GPU-accelerated model training",
+      "Integrated Batchnorm, Dropout, and Early Stopping to minimize overfitting and accelerate model convergence",
+    ],
+    techStack: [
+      "PyTorch",
+      "python-chess",
+      "Hugging Face Datasets",
+      "NumPy",
+      "Matplotlib",
+    ],
+    projectLink: "",
+  },
+  {
     imgSrc: "/images/cache_system.png",
     title: "High-Concurrency Cache System",
     description: [
@@ -41,6 +77,23 @@ const works: WorkItem[] = [
     projectLink: "https://github.com/M4cr0Chen/myDigitRecognition",
   },
   {
+    imgSrc: "/images/tetris-2.png",
+    title: "Biquadris (Multi-Player Tertris)",
+    description: [
+      "Developed a C++ multiplayer Tetris game featuring both terminal-based and X11 graphical interfaces",
+      "Strictly followed Object-Oriented Design principles and design patterns (Observer, Decorator, MVC)",
+      "Ensured memory safety by adhering to RAII, using smart pointers for all dynamic resource management",
+    ],
+    techStack: [
+      "C++",
+      "Object-Oriented Programming",
+      "Smart Pointers",
+      "STL",
+      "Design Patterns",
+    ],
+    projectLink: "https://github.com/M4cr0Chen/Biquadris",
+  },
+  {
     imgSrc: "/images/project-1.png",
     title: "Auto Finder",
     description: [
@@ -62,27 +115,12 @@ const works: WorkItem[] = [
       "https://github.com/M4cr0Chen/xrwvm-fullstack_developer_capstone",
   },
   {
-    imgSrc: "/images/tetris-2.png",
-    title: "Biquadris (Multi-Player Tertris)",
-    description: [
-      "A multiplayer version of Tetris with enhanced gameplay features. Players can compete against each other with special abilities and challenges.",
-    ],
-    techStack: [
-      "C++",
-      "Object-Oriented Programming",
-      "Smart Pointers",
-      "STL",
-      "Design Patterns",
-    ],
-    projectLink: "https://github.com/M4cr0Chen/Biquadris",
-  },
-  {
     imgSrc: "/images/project-2.png",
     title: "Portfolio Website",
     description: [
       "A personal portfolio website showcasing my projects, skills, and experience. Built with modern web technologies for optimal performance.",
     ],
-    techStack: ["React", "JavaScript", "Tailwind CSS"],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     projectLink: "https://github.com/M4cr0Chen/my-portfolio",
   },
   {
@@ -113,7 +151,7 @@ const works: WorkItem[] = [
       "Utilized B\u00e9zier Curve to implement vector calculation of object movement",
       "Optimized game performance by 40% leveraging the double buffering technique",
     ],
-    techStack: ["C", "EasyX", "Game Development", "Algorithms"],
+    techStack: ["C", "EasyX", "Memory Management", "Data Structures and Algorithms"],
     projectLink: "https://github.com/M4cr0Chen/My-Plants-VS-Zombies",
   },
   {
@@ -125,15 +163,15 @@ const works: WorkItem[] = [
     techStack: ["JavaScript", "Google Maps API", "Node.js", "MongoDB"],
     projectLink: "https://kneadaschit.biz/",
   },
-  {
-    imgSrc: "/images/counter_strike.png",
-    title: "Counter-Strike (Ongoing)",
-    description: [
-      "A first-person shooter game inspired by Counter-Strike, built using Unreal Engine 5. Currently in development with custom maps and game modes.",
-    ],
-    techStack: ["Unreal Engine 5", "Blueprint", "IK Retargeting", "Animation"],
-    projectLink: "https://github.com/codewithsadee/vcard-personal-portfolio",
-  },
+  // {
+  //   imgSrc: "/images/counter_strike.png",
+  //   title: "Counter-Strike (Ongoing)",
+  //   description: [
+  //     "A first-person shooter game inspired by Counter-Strike, built using Unreal Engine 5. Currently in development with custom maps and game modes.",
+  //   ],
+  //   techStack: ["Unreal Engine 5", "Blueprint", "IK Retargeting", "Animation"],
+  //   projectLink: "https://github.com/codewithsadee/vcard-personal-portfolio",
+  // },
 ];
 
 const Work = () => {

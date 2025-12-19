@@ -26,8 +26,8 @@ export default function HomeContent() {
       <main>
         <Hero />
         <About />
-        <Courses />
         <Skill />
+        <Courses />
         <Experience />
         <Work />
         <Contact />

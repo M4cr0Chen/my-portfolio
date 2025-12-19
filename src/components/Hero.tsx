@@ -49,8 +49,7 @@ const Hero = () => {
             className="headline-1 max-w-[20ch] sm:max-w-[20ch]
                 lg:max-w-[30ch] mt-5 mb-8 lg:mb-10"
           >
-            Zhenghong Chen (Marco) University of Waterloo second year CS
-            student.
+            Zhenghong (Marco) Chen University of Waterloo second year CS student.
           </h2>
 
           <div className="flex items-center gap-3">

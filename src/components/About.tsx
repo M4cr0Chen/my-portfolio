@@ -25,11 +25,10 @@ const About = () => {
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            Welcome! I&apos;m Zhenghong Chen, a second year CS student at the
-            University of Waterloo. I&apos;m passionate about distributed
-            systems, compilers, machine learning, web development, game
-            development, and so much more. I have experience in Web Development
-            and Quality Assurance.
+            Welcome! I&apos;m Marco, a second year CS student at the
+            University of Waterloo. I&apos;m passionate about open source development, machine learning, distributed
+            systems, web development, and so much more. I have experience in Full-Stack Web Development.
+            Feel free to explore my portfolio to see some of my previous work experiences and the projects I&apos;ve worked on along the way!
           </p>
 
           <div className="flex flex-wrap items-center gap-4 md:gap-7">

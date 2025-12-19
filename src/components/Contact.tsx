@@ -131,7 +131,7 @@ const Contact = () => {
                 id="name"
                 autoComplete="name"
                 required
-                placeholder="Zhenghong Chen"
+                placeholder="Zhenghong (Marco) Chen"
                 className="text-field"
               />
             </div>

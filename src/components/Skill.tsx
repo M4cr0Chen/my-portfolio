@@ -14,13 +14,8 @@ interface SkillItem {
 
 const skillItem: SkillItem[] = [
   {
-    imgSrc: "/images/cpp.png",
-    label: "C++",
-    desc: "Programming Language",
-  },
-  {
-    imgSrc: "/images/c.png",
-    label: "C",
+    imgSrc: "/images/python.svg",
+    label: "Python",
     desc: "Programming Language",
   },
   {
@@ -34,19 +29,24 @@ const skillItem: SkillItem[] = [
     desc: "Programming Language",
   },
   {
+    imgSrc: "/images/cSharp.png",
+    label: "C#",
+    desc: "Programming Language",
+  },
+  {
+    imgSrc: "/images/cpp.png",
+    label: "C++",
+    desc: "Programming Language",
+  },
+  {
     imgSrc: "/images/java.png",
     label: "Java",
     desc: "Programming Language",
   },
   {
-    imgSrc: "/images/tensorflow.svg",
-    label: "TensorFlow",
-    desc: "AI/ML",
-  },
-  {
-    imgSrc: "/images/opencv.png",
-    label: "OpenCV",
-    desc: "AI/ML",
+    imgSrc: "/images/Git.png",
+    label: "Git",
+    desc: "Version Control",
   },
   {
     imgSrc: "/images/linux.png",
@@ -54,9 +54,19 @@ const skillItem: SkillItem[] = [
     desc: "Operating System",
   },
   {
-    imgSrc: "/images/nodejs.svg",
-    label: "NodeJS",
-    desc: "Web Server",
+    imgSrc: "/images/FastAPI.png",
+    label: "FastAPI",
+    desc: "Python Framework",
+  },
+  {
+    imgSrc: "/images/django.svg",
+    label: "Django",
+    desc: "Python Framework",
+  },
+  {
+    imgSrc: "/images/Nextjs.png",
+    label: "Next.js",
+    desc: "Framework",
   },
   {
     imgSrc: "/images/react.svg",
@@ -69,19 +79,34 @@ const skillItem: SkillItem[] = [
     desc: "User Interface",
   },
   {
-    imgSrc: "/images/django.svg",
-    label: "Django",
-    desc: "Python Framework",
+    imgSrc: "/images/figma.svg",
+    label: "Figma",
+    desc: "Design tool",
+  },
+  {
+    imgSrc: "/images/Jest.svg",
+    label: "Jest",
+    desc: "Testing Framework",
+  },
+  {
+    imgSrc: "/images/AWS.png",
+    label: "AWS",
+    desc: "Cloud Services",
+  },
+  {
+    imgSrc: "/images/Google Cloud.svg",
+    label: "Google Cloud",
+    desc: "Cloud Services",
   },
   {
     imgSrc: "/images/docker.svg",
     label: "Docker",
-    desc: "Python Framework",
+    desc: "Containerization",
   },
   {
-    imgSrc: "/images/expressjs.svg",
-    label: "ExpressJS",
-    desc: "Node Framework",
+    imgSrc: "/images/PostgresSQL.png",
+    label: "PostgreSQL",
+    desc: "Database",
   },
   {
     imgSrc: "/images/mongodb.svg",
@@ -89,9 +114,24 @@ const skillItem: SkillItem[] = [
     desc: "Database",
   },
   {
-    imgSrc: "/images/figma.svg",
-    label: "Figma",
-    desc: "Design tool",
+    imgSrc: "/images/langGraph.png",
+    label: "langGraph",
+    desc: "AI/ML",
+  },
+  {
+    imgSrc: "/images/PyTorch.png",
+    label: "PyTorch",
+    desc: "AI/ML",
+  },
+  {
+    imgSrc: "/images/tensorflow.svg",
+    label: "TensorFlow",
+    desc: "AI/ML",
+  },
+  {
+    imgSrc: "/images/opencv.png",
+    label: "OpenCV",
+    desc: "AI/ML",
   },
 ];
 
