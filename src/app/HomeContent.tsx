@@ -21,7 +21,7 @@ import TerminalPrompt from "../components/TerminalPrompt";
 export default function HomeContent() {
   return (
     <ReactLenis root>
-      <TerminalPrompt />
+      {/* <TerminalPrompt /> */}
       <Header />
       <main>
         <Hero />
