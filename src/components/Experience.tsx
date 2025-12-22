@@ -18,7 +18,7 @@ const experienceData: ExperienceData[] = [
     title: "Open Source Developer/Reviewer",
     company: "Shipd (by Datacurve YC W24)",
     date: "Dec. 2025 – Current",
-    techStack: ["TypeScript", "Python", "LLM Training,", "OSS"],
+    techStack: ["TypeScript", "Python", "LLM Training", "OSS"],
     description: [
       "Safeguarded the AI training pipeline against data contamination by auditing peer code submissions to ensure high-quality data ingestion",
       "Engineered Ground Truth datasets by reproducing bugs in high-traffic OSS repositories, authoring distinguishing test suites to capture edge cases, and implementing production-grade patches",
